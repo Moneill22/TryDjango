@@ -9,8 +9,14 @@
 </p>
 <ul>
 	{%for my_sub_item in my_list %}
-	<li>{{my_sub_item}}</li>
-	{%endfor%}
+		{% if my_sub_item == 312%}
+			<li>{{forloop.counter}} - {{my_sub_item|add:22}}</li>
+		{% elif my_sub_item == "Abc" %}
+			<li>This is not the network</li>
+		{% else %}
+			<li>{{forloop.counter}} - {{my_sub_item}}</li>
+		{% endif %}
+	{% endfor %}
 </ul>
 
 
