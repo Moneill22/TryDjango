@@ -11,6 +11,8 @@ def product_detail_view(request):
 	}
 	return render(request, "product/detail.html", context)
 
+
+
 def product_create_view(request):
 	form = ProductForm(request.POST or None)
 
